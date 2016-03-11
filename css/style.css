@@ -1,0 +1,108 @@
+@import "http://fonts.googleapis.com/css?family=Montserrat:300,400,700";
+.rwd-table {
+  margin: 0 auto;
+  min-width: 300px;
+  border-spacing: 0;
+}
+.rwd-table tr {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+.rwd-table th {
+  border-right: 1px solid #ddd;
+  display: none;
+  font-size:20px;
+  text-align: center;
+}
+.rwd-table th:last-child {
+ border-right: none;
+}
+.rwd-table td {
+  border-right: 1px solid #ddd;
+  display: block;
+}
+.rwd-table td:first-child {
+  padding-top: .5em;
+}
+.rwd-table td:last-child {
+  border-right: none;
+  padding-bottom: .5em;
+}
+.rwd-table td:before {
+  content: attr(data-th) ": ";
+  font-weight: bold;
+  width: 6.5em;
+  display: inline-block;
+}
+@media (min-width: 480px) {
+  .rwd-table td:before {
+    display: none;
+  }
+}
+.rwd-table td {
+  text-align: left;
+}
+@media (min-width: 480px) {
+  .rwd-table th, .rwd-table td {
+    display: table-cell;
+    padding: 0 .5em;
+  }
+  .rwd-table th:first-child, .rwd-table td:first-child {
+    padding-left: 0;
+  }
+  .rwd-table th:last-child, .rwd-table td:last-child {
+    padding-right: 0;
+  }
+}
+
+body {
+  padding: 0 2em;
+  font-family: Montserrat, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: #444;
+  background: #eee;
+}
+
+h1 {
+  font-weight: normal;
+  letter-spacing: -1px;
+  color: #34495E;
+}
+
+.rwd-table {
+  background: #34495E;
+  color: #fff;
+  border-radius: .4em;
+  overflow: hidden;
+}
+.rwd-table tr {
+  border-color: #46637f;
+}
+.rwd-table th, .rwd-table td {
+  margin: .5em 1em;
+}
+@media (min-width: 480px) {
+  .rwd-table td {
+    padding: 0.2em 1.0em !important;
+  }
+  .rwd-table th {
+    padding: 0.9em 1.0em !important;
+}
+}
+.rwd-table th, .rwd-table td:before {
+  color: #dd5;
+}
+.rwd-table tr:nth-child(even) {background-color: #274E75}
+
+span {
+	font-size: 40px;
+	color: orange;
+	cursor: pointer;
+}
+
+span:hover:before {
+	content: "\2605";
+	position: absolute;
+	color: orange;
+}
